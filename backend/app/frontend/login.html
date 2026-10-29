@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Student Portfolio</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <main class="login-container">
+        <section class="welcome-panel">
+            <div class="brand">
+                <div class="brand-icon">SP</div>
+                <span>Student Portfolio</span>
+            </div>
+
+            <div class="welcome-content">
+                <p class="eyebrow">YOUR JOURNEY STARTS HERE</p>
+                <h1>Showcase your<br>potential.</h1>
+                <p>
+                    Bring your academic achievements, skills,
+                    and projects together in one place.
+                </p>
+            </div>
+
+            <p class="copyright">© 2026 Student Portfolio System</p>
+        </section>
+
+        <section class="form-panel">
+            <div class="login-card">
+                <div class="mobile-brand">SP</div>
+                <section id="loginPanel">
+                    <p class="eyebrow">WELCOME BACK</p>
+                    <h2>Sign in to your account</h2>
+                    <p class="subtitle">
+                        Enter your details to access your dashboard.
+                    </p>
+
+                    <form id="loginForm">
+                        <label for="loginEmail">Email address</label>
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="you@example.com"
+                            autocomplete="username"
+                            required
+                            maxlength="150"
+                        >
+
+                        <div class="password-heading">
+                            <label for="loginPassword">Password</label>
+                        </div>
+
+                        <div class="password-box">
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required
+                                maxlength="128"
+                            >
+                            <button type="button" id="togglePassword">
+                                Show
+                            </button>
+                        </div>
+
+                        <p id="loginMessage" class="auth-message" role="status" aria-live="polite"></p>
+
+                        <button type="submit" class="login-button">
+                            Sign In <span>→</span>
+                        </button>
+                    </form>
+
+                    <p class="account-switch">
+                        New here?
+                        <button type="button" id="showRegister">Create an account</button>
+                    </p>
+                </section>
+
+                <section id="registerPanel" hidden>
+                    <p class="eyebrow">GET STARTED</p>
+                    <h2>Create your account</h2>
+                    <p class="subtitle">
+                        Create a student profile to access the portfolio workspace.
+                    </p>
+
+                    <form id="registerForm">
+                        <label for="registerName">Full name</label>
+                        <input id="registerName" name="name" required maxlength="100"
+                            autocomplete="name" placeholder="Enter full name">
+
+                        <label for="registerEmail">Email address</label>
+                        <input id="registerEmail" name="email" type="email" required maxlength="150"
+                            autocomplete="email" placeholder="you@example.com">
+
+                        <label for="registerDepartment">Department</label>
+                        <input id="registerDepartment" name="department" required maxlength="100"
+                            placeholder="e.g. Computer Science">
+
+                        <label for="registerCollege">College <span class="optional-label">(optional)</span></label>
+                        <input id="registerCollege" name="college" maxlength="150"
+                            placeholder="Enter college name">
+
+                        <label for="registerPassword">Password</label>
+                        <input id="registerPassword" name="password" type="password" required
+                            minlength="8" maxlength="128" autocomplete="new-password"
+                            placeholder="At least 8 characters">
+
+                        <p id="registerMessage" class="auth-message" role="status" aria-live="polite"></p>
+
+                        <button type="submit" class="login-button">
+                            Create account <span>→</span>
+                        </button>
+                    </form>
+
+                    <p class="account-switch">
+                        Already registered?
+                        <button type="button" id="showLogin">Sign in</button>
+                    </p>
+                </section>
+
+                <p class="security-note">
+                    Student Portfolio System · Secure access
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f7fc;
+    color: #172033;
+    min-height: 100vh;
+}
+
+.login-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.welcome-panel {
+    background: linear-gradient(145deg, #111c3c, #2447a5);
+    color: white;
+    padding: 48px 9%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.brand-icon,
+.mobile-brand {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 13px;
+    background: #ffffff;
+    color: #2145a0;
+    font-weight: 800;
+}
+
+.welcome-content {
+    max-width: 480px;
+    margin: 60px 0;
+}
+
+.eyebrow {
+    color: #6485ee;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.welcome-panel .eyebrow {
+    color: #a9c2ff;
+}
+
+.welcome-content h1 {
+    font-size: clamp(38px, 4vw, 60px);
+    line-height: 1.12;
+    margin-bottom: 24px;
+    letter-spacing: -1.5px;
+}
+
+.welcome-content > p:last-child {
+    max-width: 390px;
+    color: #d3dcf5;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.copyright {
+    color: #b5c3e6;
+    font-size: 12px;
+}
+
+.form-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 24px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+}
+
+.login-card h2 {
+    font-size: 29px;
+    letter-spacing: -0.7px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    color: #7a8497;
+    line-height: 1.7;
+    font-size: 14px;
+    margin-bottom: 32px;
+}
+
+form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 9px;
+}
+
+form > input,
+.password-box input {
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #dce2ed;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    outline: none;
+    font-size: 14px;
+    color: #172033;
+}
+
+form > input {
+    margin-bottom: 23px;
+}
+
+form input:focus {
+    border-color: #4169e1;
+    box-shadow: 0 0 0 3px #4169e11c;
+}
+
+.password-box {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dce2ed;
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    padding-right: 12px;
+}
+
+.password-box:focus-within {
+    border-color: #4169e1;
+    box-shadow: 0 0 0 3px #4169e11c;
+}
+
+.password-box input {
+    border: none;
+    box-shadow: none;
+}
+
+.password-box input:focus {
+    box-shadow: none;
+}
+
+.password-box button {
+    border: none;
+    background: transparent;
+    color: #3154b8;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.login-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #3158c9;
+    color: white;
+    border: none;
+    padding: 16px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.2s;
+}
+
+.login-button:hover {
+    background: #2445a9;
+}
+
+.login-button span {
+    font-size: 21px;
+}
+
+.auth-message {
+    min-height: 20px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.auth-message.error {
+    color: #c62828;
+}
+
+.auth-message.success {
+    color: #16865c;
+}
+
+.account-switch {
+    margin-top: 20px;
+    color: #7a8497;
+    text-align: center;
+    font-size: 13px;
+}
+
+.account-switch button {
+    border: 0;
+    background: transparent;
+    color: #3154b8;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.optional-label {
+    color: #7a8497;
+    font-weight: 400;
+}
+
+.security-note {
+    text-align: center;
+    margin-top: 30px;
+    color: #8a93a5;
+    font-size: 12px;
+}
+
+.mobile-brand {
+    display: none;
+    margin-bottom: 28px;
+}
+
+@media (max-width: 760px) {
+    .login-container {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-panel {
+        display: none;
+    }
+
+    .form-panel {
+        min-height: 100vh;
+        padding: 30px 22px;
+    }
+
+    .mobile-brand {
+        display: grid;
+    }
+
+    .login-card h2 {
+        font-size: 26px;
+    }
+}
